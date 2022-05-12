@@ -1,0 +1,17 @@
+exposures:
+  
+  - name: weekly_metrics
+    type: dashboard
+    maturity: high
+    url: https://10ay.online.tableau.com/#/site/ntwrktableau/home
+    description: >
+      Did someone say "exponential growth"?
+    
+    depends_on:
+      - ref('fct_orders')
+      - ref('dim_customers')
+      - source('gsheets', 'goals')
+      
+    owner:
+      name: Mike from Data
+      email: mike.williams@thentwrk.com

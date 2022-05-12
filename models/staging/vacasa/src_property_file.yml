@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: property_scrape_amsterdam
+    description: Scraped data from Amsterdam.
+    database: VACASA_DEMO
+    schema: RAW
+    tables:
+      - name: AMSERTERDAM_CSV
+        description: Raw property data
+        columns:
+          - name: id
+            description: Primary key for property data.
+            tests:
+              - unique
+              - not_null
+      - name: RATES
+        description: Rate data
+        columns:
+          - name: id
+            description: Primary key for property data.
+            tests:
+              - unique
+              - not_null
