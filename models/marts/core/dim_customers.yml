@@ -1,3 +1,5 @@
+version: 2
+
 exposures:
   
   - name: weekly_metrics
@@ -10,7 +12,6 @@ exposures:
     depends_on:
       - ref('fct_orders')
       - ref('dim_customers')
-      - source('gsheets', 'goals')
       
     owner:
       name: Mike from Data
