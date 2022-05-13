@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: ntwrk_prod_aws
+    database: raw
+    tables:
+      - name: dl_show_notification
+
+      - name: dl_show
+
+      - name: f_user_show_views
+
+      - name: dl_transaction
+
+      - name: dl_show_request                               
