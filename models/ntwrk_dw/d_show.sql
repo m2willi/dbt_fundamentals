@@ -78,8 +78,8 @@ END as show_date_type_name
             CASE WHEN rs.rerun_show_id IS NOT NULL THEN 1 ELSE 0 END as is_rerun,
             rs.original_show_id as original_show_id,
             rs.rerun_id as rerun_id
-FROM ntwrk_prod_aws.dl_show sh
-    LEFT JOIN first_notify fn on fn.showid = sh.id
+FROM {{ref('stg_dl_show')}} sh
+    LEFT JOIN {{ref('int_show_first_notify')}} fn on fn.showid = sh.id
 LEFT JOIN (
     SELECT t1.show_id,
     t1.show_quarter_number,
