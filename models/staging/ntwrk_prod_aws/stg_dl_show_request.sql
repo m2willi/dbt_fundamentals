@@ -1,0 +1,21 @@
+SELECT
+_sdc_batched_at    ,
+ _sdc_extracted_at, 
+ _sdc_received_at , 
+ _sdc_sequence    , 
+ _sdc_table_version,
+ approved_at      , 
+ created_at       , 
+ id               , 
+ rejected_at      , 
+ requested_by     , 
+ show_id          , 
+ start_time       , 
+ submitted_at     , 
+ tile_image_url   , 
+ title            , 
+ updated_at       , 
+ removed_at       , 
+ teaser_video_url , 
+ team_id           
+ from {{ source('ntwrk_prod_aws', 'dl_show_request') }}    

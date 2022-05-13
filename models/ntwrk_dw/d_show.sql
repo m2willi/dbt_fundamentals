@@ -129,7 +129,7 @@ LEFT JOIN ntwrk_block.d_show_festival sf on sf.show_id = sh.id
     LEFT JOIN {{ref('int_show_numbering')}} num on num.show_id = sh.id
     LEFT JOIN promo pro on pro.show_id = sh.id
     LEFT JOIN (SELECT show_id
-               FROM {{ref('stage show_requrest')}}
+               FROM {{ref('stg_dl_show_request')}}
         GROUP BY 1
                     ) sr on sr.show_id = sh.id
     LEFT JOIN {{ref('int_show_rerun')}} rs on rs.rerun_show_id = sh.id
